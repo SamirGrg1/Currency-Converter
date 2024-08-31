@@ -1,4 +1,4 @@
-const URL = `${url}=${fromCurr.value.toLowerCase()}%2C${toCurr.value.toLowerCase()}.json`;
+// const URL = `${url}=${fromCurr.value.toLowerCase()}%2C${toCurr.value.toLowerCase()}.json`;
 
 const url = "https://api.freecurrencyapi.com/v1/latest?apikey=fca_live_wkX41bo7SLCXb8xSXeQwck2p8V2FVfYy47VbvR8o";
 
@@ -69,15 +69,13 @@ const updateFlag = (element) => {
     let newSrc = `https://flagsapi.com/${countryCode}/flat/64.png`;
     let img = element.parentElement.querySelector("img");
     img.src = newSrc;
-};
-
-// Event listener for the conversion button click
-btn.addEventListener("click", (evt) => {
+  };
+  
+  btn.addEventListener("click", (evt) => {
     evt.preventDefault();
     updateExchangeRate();
-});
-
-// Event listener to update exchange rate on page load
-window.addEventListener("load", () => {
+  });
+  
+  window.addEventListener("load", () => {
     updateExchangeRate();
-});
+  });
